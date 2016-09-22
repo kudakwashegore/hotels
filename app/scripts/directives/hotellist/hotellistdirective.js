@@ -7,9 +7,21 @@
         .directive('hotelList', function(){
             return {
                 restrict: 'E',
-                templateUrl: 'directives/hotellist/hotellist.html',
+                templateUrl: 'scripts/directives/hotellist/hotellistdirective.html',
                 replace: true,
                 scope: {
+                        hotelId: "@",
+                        hotelName: "@",
+                        hotelCountry: "@",
+                        hotelCity: "@",
+                        hotelThumb: "@",
+                        hotelDateStart: "@",
+                        hotelDateEnd: "@",
+                        hotelStars: "@",
+                        hotelRating: "@",
+                        hotelPrice: "@",
+                        hotelDescription: "@",
+                        dateFormat: "@"                        
                 }
             }
         });

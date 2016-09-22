@@ -1,0 +1,22 @@
+<div class="panel panel-primary hotel"> 
+    <div class="hotel-preview">
+        <div class="thumb">
+            <img src="{{hotelThumb}}" />
+        </div>
+
+        <div class="description">
+            <h2><span class="name">{{hotelName}}</span> <span class="rating">{{hotelRating}}</span></h2>
+            <small class="location">{{hotelCity}}-{{hotelCountry}}</small>
+            <p>{{hotelDescription | limitTo: 200}}</p>
+            <div class="hotel-footer">
+                <button class="btn btn-primary btn-review" data-id="{{hotelId}}">Show Reviews</button>
+                <div class="price">
+                    <big>{{hotelPrice}}&euro;</big>
+                    <small>{{hotelDateStart  | date: dateFormat}}-{{hotelDateEnd | date: dateFormat}}</small>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="reviews"></div>
+</div>

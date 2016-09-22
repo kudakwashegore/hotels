@@ -4,7 +4,17 @@
     
     angular
     .module('hotelApp')
-    .factory('gitDataFactory',['$resource',function($resource){  
+    .factory('GitDataFactory',['$http',function($http){  
+         return {
+            getData: function(url) {
+                 //return the promise.
+                 return $http.get(url)
+                       .then(function(result) {
+                            //resolve the promise as the data
+                            return result.data;
+                        });
+                }
+        }
     }]);
     
 })();

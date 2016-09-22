@@ -1,7 +1,7 @@
 <div class="hotels">
-    
+     <hotel-list ng-repeat="hotel in hotels" hotel-id="{{hotel.id}}" hotel-name="{{hotel.name}}" hotel-country="{{hotel.country}}" hotel-city="{{hotel.city}}" hotel-thumb="{{hotel.images[0]}}" hotel-date-start="{{hotel.date_start}}" hotel-date-end="{{hotel.date_end}}"  hotel-stars="{{hotel.stars}}"  hotel-rating="{{hotel.rating}}" hotel-price="{{hotel.price}}" hotel-description="{{hotel.description}}" date-format="dd.MM.yyyy"></hotel-list>
 </div>
 
 <div class="center">
-    <button class="btn btn-primary">Load hotel</button>
+    <button class="btn btn-primary">Load hotels</button>
 </div>
