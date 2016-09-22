@@ -31,28 +31,52 @@ body {
   float: right;
   width: 65%;
   padding: 20px;
+  max-height: 270px;
   box-sizing: border-box;
 }
 .panel-primary.hotel .hotel-preview .description h2 {
   overflow: hidden;
   font-size: 30px;
   margin: 0;
-  line-height: 40px;
+  line-height: 25px;
   text-transform: capitalize;
 }
-.panel-primary.hotel .hotel-preview .description h2 span {
+.panel-primary.hotel .hotel-preview .description h2 .name,
+.panel-primary.hotel .hotel-preview .description h2 .rating {
   display: inline-block;
 }
 .panel-primary.hotel .hotel-preview .description h2 .name {
   float: left;
+  width: 58%;
 }
 .panel-primary.hotel .hotel-preview .description h2 .rating {
   float: right;
   font-size: 20px;
+  color: #c5c5c5;
+  width: 120px;
+  height: 24px;
+  overflow: hidden;
+  position: relative;
+}
+.panel-primary.hotel .hotel-preview .description h2 .rating-value {
+  color: #000;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.panel-primary.hotel .hotel-preview .description h2 .rating-base {
+  display: block;
+  z-index: 0;
+}
+.panel-primary.hotel .hotel-preview .description h2 .rating i {
+  font-style: normal;
 }
 .panel-primary.hotel .hotel-preview .description .location {
   display: block;
-  margin: 5px 0 25px;
+  margin: 5px 0 20px;
 }
 .panel-primary.hotel .hotel-preview .description p {
   margin: 0;

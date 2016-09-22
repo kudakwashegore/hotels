@@ -43,22 +43,47 @@ html,body{
         float: right;
         width: 65%;
         padding: 20px;
+        max-height: 270px;
         box-sizing: border-box;
         h2{
             overflow: hidden;
             font-size: @larger-font-size;
             margin: 0;
-            line-height: 40px;
+            line-height: 25px;
             text-transform: capitalize;
-            span{
+            .name,
+            .rating{
                 display: inline-block;
             }
             .name{
                 float: left;
+                width: 58%;
             }
+            //https://codepen.io/Bluetidepro/pen/GkpEa
             .rating{
                 float: right;
                 font-size: @medium-font-size;
+                color: #c5c5c5;
+                width: 120px;
+                height: 24px;
+                overflow: hidden;
+                position: relative;
+                &-value {
+                    color: #000;
+                    position: absolute;
+                    z-index: 1;
+                    display: block;
+                    top: 0;
+                    left: 0;
+                    overflow: hidden;
+                }
+                &-base {
+                    display: block;
+                    z-index: 0;
+                }
+                i{
+                    font-style: normal;
+                }
             }
         }
         .location{

@@ -5,7 +5,25 @@
         </div>
 
         <div class="description">
-            <h2><span class="name">{{hotelName}}</span> <span class="rating">{{hotelRating}}</span></h2>
+            <h2>
+                <span class="name">{{hotelName}}</span>
+                <div class="rating">
+                    <div class="rating-value" style="width: {{hotelRating}}%">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>                    
+                    <div class="rating-base">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </h2>
             <small class="location">{{hotelCity}}-{{hotelCountry}}</small>
             <p>{{hotelDescription | limitTo: 200}}</p>
             <div class="hotel-footer">
