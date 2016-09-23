@@ -31,14 +31,15 @@ body {
   float: right;
   width: 65%;
   padding: 20px;
-  max-height: 270px;
+  min-height: 270px;
   box-sizing: border-box;
+  position: relative;
 }
 .panel-primary.hotel .hotel-preview .description h2 {
   overflow: hidden;
   font-size: 30px;
   margin: 0;
-  line-height: 25px;
+  line-height: 32px;
   text-transform: capitalize;
 }
 .panel-primary.hotel .hotel-preview .description h2 .name,
@@ -84,10 +85,13 @@ body {
 .panel-primary.hotel .hotel-preview .description .hotel-footer {
   overflow: hidden;
   margin-top: 35px;
-  position: relative;
+  position: absolute;
+  bottom: 20px;
+  width: 93%;
 }
 .panel-primary.hotel .hotel-preview .description .hotel-footer button {
   float: left;
+  margin-top: 25px;
 }
 .panel-primary.hotel .hotel-preview .description .hotel-footer .price {
   float: right;
@@ -97,4 +101,7 @@ body {
 .panel-primary.hotel .hotel-preview .description .hotel-footer .price big,
 .panel-primary.hotel .hotel-preview .description .hotel-footer .price small {
   display: block;
+}
+.panel-primary.hotel .hotel-preview .description .hotel-footer .price big {
+  font-size: 30px;
 }

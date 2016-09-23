@@ -43,13 +43,14 @@ html,body{
         float: right;
         width: 65%;
         padding: 20px;
-        max-height: 270px;
+        min-height: 270px;
         box-sizing: border-box;
+        position: relative;
         h2{
             overflow: hidden;
             font-size: @larger-font-size;
             margin: 0;
-            line-height: 25px;
+            line-height: 32px;
             text-transform: capitalize;
             .name,
             .rating{
@@ -96,9 +97,12 @@ html,body{
         .hotel-footer{
             overflow: hidden;
             margin-top: 35px;
-            position: relative;
+            position: absolute;
+            bottom: 20px;
+            width: 93%;
             button{
                 float: left;
+                margin-top: 25px;
             }
             .price{
                 float: right;
@@ -106,6 +110,9 @@ html,body{
                 text-align: right;
                 big,small{
                     display: block;
+                }
+                big{
+                    font-size: @larger-font-size;
                 }
             }
         }

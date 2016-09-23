@@ -21,6 +21,8 @@
                         hotelRating: "@",
                         hotelPrice: "@",
                         hotelDescription: "@",
+                        hotelReviews: "&",
+                        hotelsReviews: '=',
                         dateFormat: "@"                        
                 }
             }

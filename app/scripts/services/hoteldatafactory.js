@@ -6,6 +6,7 @@
     .module('hotelApp')
     .factory('GitDataFactory',['$http',function($http){  
          return {
+            reviews: {},
             getData: function(url) {
                  //return the promise.
                  return $http.get(url)
