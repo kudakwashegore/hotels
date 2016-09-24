@@ -1,21 +1,14 @@
-### Hotel Search Client
+### Hotel Listing App
 
-This app displays a list of hotels and show their details
+This app displays a list of hotels, their star rating and reviews
 
 ### How to run the app
 
-Download and run files inside App directory using a webserver. It's recommended to have a live internet connection when running the app since some of the libraries such as angularjs an bootstrap load from CDN.
-
-### Ruuning Unit Tests using Karma
-
-Unit test is implimented using Karma and Jasmine. To run unit test install Nodejs and use npm to install Karma cli as shown below
-
-`npm install -g karma-cli`
-
-After karma installation, go to the root directory of the project and run the following command to install angularjs libraries for testing
-
-`npm install angular angular-router angular-resource angular-mocks --save-dev`
-
-Testing is now ready. Run the following command and see test results
-
-`karma start`
+<ol>
+    <li>Download repository as .zip</li>
+    <li>The root directory of the application is app/ directory</li>
+    <li>Unzip the contents of app/ into a web server directory</li>
+    <li>Open a browser and use the server url to access the app. Make sure teh url points to the app's root directory</li>
+    <li><b>NB</b> The app will not run properly if you simply click on the app/index.html file</li>
+    <li>Run app with a live internet connection since some of the libraries such as angularjs,font-awesome and bootstrap load from CDNs.</li>
+</ol>
