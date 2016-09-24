@@ -13,6 +13,11 @@
                 })
                 .otherwise({redirectTo : '/hotel-list'});
 
+        })
+        //setting up constants for variables that wont change much
+        .constant('config',{
+            hotelListApiUrl: "http://fake-hotel-api.herokuapp.com/api/hotels?count=",
+            hotelReviewsApiUrl: "http://fake-hotel-api.herokuapp.com/api/reviews?hotel_id="        
         });
     
 })();

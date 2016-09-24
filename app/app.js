@@ -1,6 +1,5 @@
-//defining our app and dependencies 
+//defining the app and it's angular dependencies 
 (function(){
-    'use strict';
-    
-    angular.module('hotelApp',['ngRoute', 'ngResource']);
+    'use strict';    
+     angular.module('hotelApp',['ngRoute', 'ngResource']);
 })();

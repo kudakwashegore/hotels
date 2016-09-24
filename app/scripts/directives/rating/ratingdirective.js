@@ -1,4 +1,5 @@
-//restricting it to be used on elements only and setting up variables
+//rating directive
+//this directive can be reused whenever there is need to display reviews of a hotel
 (function(){
     'use strict';
     

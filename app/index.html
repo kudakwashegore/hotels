@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Hotel List App</title>
+    <title>Hotel List</title>
     
     <!-- load bootstrap via CDN -->
     <link href=" //maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -11,6 +11,7 @@
     <!-- load local css file to override some bootstraps styles -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" >
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <!-- less compiler will compile style.less to style.css -->
     <link href="css/style.css" rel="stylesheet">
     
     <!-- load angular via CDN -->
@@ -18,7 +19,7 @@
     <script src=" //code.angularjs.org/1.5.7/angular-route.min.js"></script>
     <script src=" //code.angularjs.org/1.5.7/angular-resource.min.js"></script>
 
-    <!--our angular app-->
+    <!--our angular app and code-->
     <script src="app.js"></script>    
     <script src="scripts/config.js"></script>    
     <script src="scripts/services/hoteldatafactory.js"></script>
@@ -29,15 +30,29 @@
 </head>
 
 <body ng-app="hotelApp">
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand">Hotels</a>
-      </div>
+  <nav class="navbar navbar-pirates">
+    <div class="navbar-pirates-purple">
+        <div class="container">
+          <div class="header">
+            <a class="header-link">
+                <span class="header-link-com">Holidaypirates.com</span>
+                <span class="header-link-logo">Holiday Pirates</span>
+                <span class="header-link-budget">Travel on a pirate's budget!</span>
+            </a>        
+          </div>
+        </div>
     </div>
+    
   </nav>
-  <div class="container">
-      <div ng-view></div>
-  </div>  
+  <section class="main">
+      <div class="container">
+          <div ng-view></div>
+      </div>
+  </section>    
+  <footer>
+      <div class="container">
+          <p>&copy; 2016. Hotel List</p>
+      </div>
+  </footer>
 </body>
 </html>

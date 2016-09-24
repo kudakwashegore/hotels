@@ -1,4 +1,5 @@
-//restricting it to be used on elements only and setting up variables
+//Review directive
+//this directive can be reused whenever there is need to show user reviews
 (function(){
     'use strict';
     

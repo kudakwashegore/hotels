@@ -4,26 +4,37 @@
  
     angular
         .module('hotelApp')
-        .controller('hotelListController',['$scope','GitDataFactory',function($scope,GitDataFactory){ 
+        .controller('hotelListController',['$scope','config','GitDataFactory',function($scope,config,GitDataFactory){             
             
-            var count = 0;
-            GitDataFactory
-                .getData('http://fake-hotel-api.herokuapp.com/api/hotels?count=' + (count + 5))
-                .then(function(hotels) {
-                    $scope.hotels = hotels;
-            });
+            //load hotels
+            $scope.loadHotels = function(){
+                $scope.showSpin = true;
+                $scope.error = false;
+                GitDataFactory
+                    .getData(config.hotelListApiUrl + 5)
+                    .then(function(hotels) {
+                        //request was successful
+                        $scope.hotels = hotels;
+                        $scope.showSpin = false;
+                }, function(resp){
+                    //an error was encountered during the request
+                    $scope.error = resp;
+                });
+            }
+            
             
             //get reviews         
             $scope.getReviews = function(id){
-                    if(GitDataFactory.reviews[id] === undefined){
+                    //get reviews for hotel id if not loaded already
+                    if(GitDataFactory.reviews[id] === undefined || GitDataFactory.reviews[id].length < 1){
                         GitDataFactory
-                            .getData('http://fake-hotel-api.herokuapp.com/api/reviews?hotel_id=' + id)
+                            .getData(config.hotelReviewsApiUrl + id)
                             .then(function(reviews) {                               
                                 GitDataFactory.reviews[id] = reviews;
                         });
                     }
                  
-                
+                 //add reviews to scope reviews
                  $scope.reviews = GitDataFactory.reviews;
             }
             

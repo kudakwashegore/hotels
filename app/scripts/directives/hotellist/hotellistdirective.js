@@ -1,4 +1,5 @@
-//restricting it to be used on elements only and setting up variables
+//hotel list directive
+//this directive will be reused whenever there is need to display a list of hotels
 (function(){
     'use strict';
     

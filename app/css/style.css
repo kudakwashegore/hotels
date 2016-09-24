@@ -3,6 +3,15 @@ body {
   color: #000;
   font-family: 'Droid Sans', sans-serif;
   font-size: 15px;
+  background: #eee;
+  margin: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  position: relative;
 }
 .container {
   max-width: 960px;
@@ -10,24 +19,98 @@ body {
 .center {
   text-align: center;
 }
-.panel-primary.hotel {
-  border-color: #000;
+.btn,
+.error {
+  border: #979797 solid 1px;
 }
-.panel-primary.hotel .hotel-preview {
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+  outline: 5px auto #4e2242;
+}
+.error {
+  margin-top: 50px;
+  padding: 10px 20px;
+  background: #d8d8d8;
+  border-radius: 5px;
+}
+.navbar-pirates {
+  background: #fff;
+  color: #fff;
+  width: 100%;
+  border-radius: 0;
+  border: none;
+  padding: 80px 0 0;
+  margin: 0;
+}
+.navbar-pirates-purple {
+  background: #4e2242;
+  width: 100%;
+  height: 45px;
+}
+.navbar-pirates .header {
+  position: relative;
+}
+.navbar-pirates .header-link {
+  color: #fff;
+}
+.navbar-pirates .header-link:hover {
+  text-decoration: none;
+}
+.navbar-pirates .header-link-com {
+  height: 0;
+  padding-top: 35px;
+  width: 250px;
+  position: absolute;
+  top: -38px;
+  left: 50px;
+  background: url(../img/logo-2.svg) no-repeat left top;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+.navbar-pirates .header-link-logo {
+  height: 0;
+  width: 120px;
+  padding-top: 140px;
+  top: -85px;
+  left: -65px;
+  background: url(../img/logo.png) no-repeat left top;
+  position: absolute;
+  overflow: hidden;
+  transform: scale(0.8);
+}
+.navbar-pirates .header-link-budget {
+  display: inline-block;
+  margin: 10px 0 0 50px;
+}
+.main {
+  padding: 20px 0 60px;
+}
+.main .hotels {
+  margin-top: 20px;
+}
+.main .hotels .panel-primary.hotel {
+  border-color: #979797;
+}
+.main .hotels .panel-primary.hotel .hotel-card {
   position: relative;
   overflow: hidden;
 }
-.panel-primary.hotel .hotel-preview .thumb {
+.main .hotels .panel-primary.hotel .hotel-card .thumb {
   float: left;
   width: 35%;
   overflow: hidden;
-  border-right: 1px solid #000;
+  border-right: 1px solid #979797;
 }
-.panel-primary.hotel .hotel-preview .thumb img {
+.main .hotels .panel-primary.hotel .hotel-card .thumb img {
   height: 270px;
   width: auto;
+  border-top-left-radius: 3px;
 }
-.panel-primary.hotel .hotel-preview .description {
+.main .hotels .panel-primary.hotel .hotel-card .description {
   float: right;
   width: 65%;
   padding: 20px;
@@ -35,32 +118,32 @@ body {
   box-sizing: border-box;
   position: relative;
 }
-.panel-primary.hotel .hotel-preview .description h2 {
+.main .hotels .panel-primary.hotel .hotel-card .description h2 {
   overflow: hidden;
   font-size: 30px;
   margin: 0;
   line-height: 32px;
   text-transform: capitalize;
 }
-.panel-primary.hotel .hotel-preview .description h2 .name,
-.panel-primary.hotel .hotel-preview .description h2 .rating {
+.main .hotels .panel-primary.hotel .hotel-card .description h2 .name,
+.main .hotels .panel-primary.hotel .hotel-card .description h2 .rating {
   display: inline-block;
 }
-.panel-primary.hotel .hotel-preview .description h2 .name {
+.main .hotels .panel-primary.hotel .hotel-card .description h2 .name {
   float: left;
   width: 58%;
 }
-.panel-primary.hotel .hotel-preview .description h2 .rating {
+.main .hotels .panel-primary.hotel .hotel-card .description h2 .rating {
   float: right;
   font-size: 20px;
-  color: #c5c5c5;
+  color: #ddd;
   width: 120px;
   height: 24px;
   overflow: hidden;
   position: relative;
 }
-.panel-primary.hotel .hotel-preview .description h2 .rating-value {
-  color: #000;
+.main .hotels .panel-primary.hotel .hotel-card .description h2 .rating-value {
+  color: #4e2242;
   position: absolute;
   z-index: 1;
   display: block;
@@ -68,40 +151,94 @@ body {
   left: 0;
   overflow: hidden;
 }
-.panel-primary.hotel .hotel-preview .description h2 .rating-base {
+.main .hotels .panel-primary.hotel .hotel-card .description h2 .rating-base {
   display: block;
   z-index: 0;
 }
-.panel-primary.hotel .hotel-preview .description h2 .rating i {
+.main .hotels .panel-primary.hotel .hotel-card .description h2 .rating i {
   font-style: normal;
 }
-.panel-primary.hotel .hotel-preview .description .location {
+.main .hotels .panel-primary.hotel .hotel-card .description .location {
   display: block;
   margin: 5px 0 20px;
 }
-.panel-primary.hotel .hotel-preview .description p {
+.main .hotels .panel-primary.hotel .hotel-card .description p {
   margin: 0;
 }
-.panel-primary.hotel .hotel-preview .description .hotel-footer {
+.main .hotels .panel-primary.hotel .hotel-card .description .hotel-footer {
   overflow: hidden;
   margin-top: 35px;
   position: absolute;
   bottom: 20px;
   width: 93%;
 }
-.panel-primary.hotel .hotel-preview .description .hotel-footer button {
+.main .hotels .panel-primary.hotel .hotel-card .description .hotel-footer button {
   float: left;
   margin-top: 25px;
 }
-.panel-primary.hotel .hotel-preview .description .hotel-footer .price {
+.main .hotels .panel-primary.hotel .hotel-card .description .hotel-footer .price {
   float: right;
   width: 50%;
   text-align: right;
 }
-.panel-primary.hotel .hotel-preview .description .hotel-footer .price big,
-.panel-primary.hotel .hotel-preview .description .hotel-footer .price small {
+.main .hotels .panel-primary.hotel .hotel-card .description .hotel-footer .price big,
+.main .hotels .panel-primary.hotel .hotel-card .description .hotel-footer .price small {
   display: block;
 }
-.panel-primary.hotel .hotel-preview .description .hotel-footer .price big {
+.main .hotels .panel-primary.hotel .hotel-card .description .hotel-footer .price big {
   font-size: 30px;
+}
+.main .hotels .panel-primary.hotel .hotel-reviews {
+  background: #bbb;
+  overflow: hidden;
+  padding: 20px 30px;
+}
+.main .hotels .panel-primary.hotel .hotel-reviews .review {
+  position: relative;
+  padding: 20px 0 20px 60px;
+  border-top: #979797 solid 1px;
+}
+.main .hotels .panel-primary.hotel .hotel-reviews .review h4 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.main .hotels .panel-primary.hotel .hotel-reviews .review p {
+  margin: 0;
+  font-size: 12px;
+}
+.main .hotels .panel-primary.hotel .hotel-reviews .review:first-child {
+  border: none;
+}
+.main .hotels .panel-primary.hotel .hotel-reviews .review:before {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  display: inline-block;
+  background: #e5e5e5;
+  text-align: center;
+  line-height: 37px;
+  height: 35px;
+  width: 35px;
+  border-radius: 35px;
+  font-family: FontAwesome;
+}
+.main .hotels .panel-primary.hotel .hotel-reviews .review.positive:before {
+  content: "\f067";
+}
+.main .hotels .panel-primary.hotel .hotel-reviews .review.negative:before {
+  content: "\f068";
+}
+footer {
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+  background: #A0518E;
+  position: absolute;
+  bottom: 0;
+}
+footer p {
+  text-align: center;
+  margin: 0;
+  font-size: 12px;
 }

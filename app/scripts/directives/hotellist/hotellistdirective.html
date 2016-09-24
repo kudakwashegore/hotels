@@ -1,5 +1,5 @@
 <div class="panel panel-primary hotel"> 
-    <div class="hotel-preview">
+    <div class="hotel-card">
         <div class="thumb">
             <img src="{{hotelThumb}}" />
         </div>
@@ -14,7 +14,7 @@
             <small class="location">{{hotelCity}} - {{hotelCountry}}</small>
             <p>{{hotelDescription | limitTo: 200}}</p>
             <div class="hotel-footer">
-                <button class="btn btn-secondary btn-review" ng-click="hotelReviews({id: hotelId});showReviews = !showReviews; ">{{!showReviews && 'Show' || 'Hide'}} Reviews</button>
+                <button class="btn btn-secondary btn-review" ng-click="hotelReviews({id: hotelId});showReviews = !showReviews; ">{{!showReviews && 'Show' || 'Hide'}} Reviews <i ng-show="!hotelsReviews[hotelId] && showReviews" class="fa fa-spinner fa-spin fa-fw" aria-hidden="true"></i></button>
                 <div class="price">
                     <big>{{hotelPrice}} &euro;</big>
                     <small>{{hotelDateStart  | date: dateFormat}} - {{hotelDateEnd | date: dateFormat}}</small>
@@ -23,7 +23,8 @@
             
         </div>
     </div>     
-    <div class="hotel-reviews" ng-if="showReviews">
+    <div class="hotel-reviews" ng-if="showReviews && hotelsReviews[hotelId]">
+        <div ng-if="hotelsReviews[hotelId].length < 1">Oops, this is embarrassing. Could not load reviews. Hide and try again.</div>
         <hotel-reviews ng-repeat="review in hotelsReviews[hotelId]" review-name="{{review.name}}" review-comment="{{review.comment}}" review-positive="review.positive"></hotel-reviews>
     </div>
 </div>

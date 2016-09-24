@@ -6,7 +6,9 @@
     .module('hotelApp')
     .factory('GitDataFactory',['$http',function($http){  
          return {
+            //variable to store loaded reviews in memory 
             reviews: {},
+            //function to do all ajax calls in the app
             getData: function(url) {
                  //return the promise.
                  return $http.get(url)
